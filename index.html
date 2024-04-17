@@ -33,19 +33,16 @@
             <input id="botaoCalculadoraPadrao" type="button" value="Padrão">
             <input type="button" value="Científica">
             <p>Conversor</p>
-            <input type="button" value="Moeda">
-            <input type="button" value="Volume">
+            <input id="botaoMoeda" type="button" value="Moeda">
+            <input id="botaoVolume" type="button" value="Volume">
             <input id="botaoComprimento" type="button" value="Comprimento">
             <input id="botaoPeso" type="button" value="Peso">
             <input id="botaoTemperatura" type="button" value="Temperatura">
-            <input type="button" value="Energia">
-            <input type="button" value="Área">
-            <input type="button" value="Velocidade">
-            <input type="button" value="Tempo">
-            <input type="button" value="Potência">
-            <input type="button" value="Dados">
-            <input type="button" value="Pressão">
-            <input type="button" value="Ângulo">
+            <input id="botaoArea" type="button" value="Área">
+            <input id="botaoVelocidade" type="button" value="Velocidade">
+            <input id="botaoTempo" type="button" value="Tempo">
+            <input id="botaoPotencia" type="button" value="Potência">
+            <input id="botaoDados" type="button" value="Dados">
         </div>
 
         <div id="mainCalculadora">
@@ -87,38 +84,54 @@
 
 
         <div id="mainConversor">
-            <div id="mainConversorTemperatura">
+            <div id="mainConversorVolume">
                 <div>
-                    <input id="temp1" type="button" value="0" placeholder="0">
-                    <select id="temp1Escolha" name="Teste">
-                        <option class="opcao" value="Celsius">Celsius</option>
-                        <option class="opcao" value="Fahrenheit">Fahrenheit</option>
-                        <option class="opcao" value="Kelvin">Kelvin</option>
+                    <input id="volume1" type="button" value="0" placeholder="0">
+                    <select id="volume1Escolha" name="Teste">
+                        <option class="opcao" value="Mililitros">Mililitros</option>
+                        <option class="opcao" value="Litros">Litros</option>
                     </select>
 
-                    <input id="temp2" type="button" value="0" placeholder="0" >
-                    <select id="temp2Escolha" name="Teste">
-                        <option value="Celsius">Celsius</option>
-                        <option value="Fahrenheit">Fahrenheit</option>
-                        <option value="Kelvin">Kelvin</option>
+                    <input id="volume2" type="button" value="0" placeholder="0" >
+                    <select id="volume2Escolha" name="Teste">
+                        <option class="opcao" value="Mililitros">Mililitros</option>
+                        <option class="opcao" value="Litros">Litros</option>
                     </select>
                 </div>
             </div>
 
             <div id="mainConversorComprimento">
                 <div>
-                    <input id="comp1" type="button" value="0" placeholder="0">
-                    <select id="comp1Escolha" name="Teste">
-                        <option class="opcao" value="Centimetros">Centimetros</option>
+                    <input id="comprimento1" type="button" value="0" placeholder="0">
+                    <select id="comprimento1Escolha" name="Teste">
+                        <option class="opcao" value="Centimetros">Centímetros</option>
                         <option class="opcao" value="Metros">Metros</option>
-                        <option class="opcao" value="Quilometros">Quilometros</option>
+                        <option class="opcao" value="Quilometros">Quilômetros</option>
                     </select>
 
-                    <input id="comp2" type="button" value="0" placeholder="0" >
-                    <select id="comp2Escolha" name="Teste">
-                        <option value="Centimetros">Centimetros</option>
+                    <input id="comprimento2" type="button" value="0" placeholder="0" >
+                    <select id="comprimento2Escolha" name="Teste">
+                        <option value="Centimetros">Centímetros</option>
                         <option value="Metros">Metros</option>
-                        <option value="Quilometros">Quilometros</option>
+                        <option value="Quilometros">Quilômetros</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="mainConversorTemperatura">
+                <div>
+                    <input id="temperatura1" type="button" value="0" placeholder="0">
+                    <select id="temperatura1Escolha" name="Teste">
+                        <option class="opcao" value="Celsius">Celsius</option>
+                        <option class="opcao" value="Fahrenheit">Fahrenheit</option>
+                        <option class="opcao" value="Kelvin">Kelvin</option>
+                    </select>
+
+                    <input id="temperatura2" type="button" value="0" placeholder="0" >
+                    <select id="temperatura2Escolha" name="Teste">
+                        <option value="Celsius">Celsius</option>
+                        <option value="Fahrenheit">Fahrenheit</option>
+                        <option value="Kelvin">Kelvin</option>
                     </select>
                 </div>
             </div>
@@ -137,6 +150,60 @@
                         <option value="Miligramas">Miligramas</option>
                         <option value="Gramas">Gramas</option>
                         <option value="Quilogramas">Quilogramas</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="mainConversorArea">
+                <div>
+                    <input id="area1" type="button" value="0" placeholder="0">
+                    <select id="area1Escolha" name="Teste">
+                        <option class="opcao" value="Centimetros quadrados">Centímetros quadrados</option>
+                        <option class="opcao" value="Metros quadrados">Metros quadrados</option>
+                        <option class="opcao" value="Quilometros quadrados">Quilômetros quadrados</option>
+                    </select>
+
+                    <input id="area2" type="button" value="0" placeholder="0" >
+                    <select id="area2Escolha" name="Teste">
+                        <option class="opcao" value="Centimetros quadrados">Centímetros quadrados</option>
+                        <option class="opcao" value="Metros quadrados">Metros quadrados</option>
+                        <option class="opcao" value="Quilometros quadrados">Quilômetros quadrados</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="mainConversorVelocidade">
+                <div>
+                    <input id="velocidade1" type="button" value="0" placeholder="0">
+                    <select id="velocidade1Escolha" name="Teste">
+                        <option class="opcao" value="Centimetros por segundo">Centímetros por segundo</option>
+                        <option class="opcao" value="Metros por segundo">Metros por segundo</option>
+                        <option class="opcao" value="Quilometros por hora">Quilômetros por hora</option>
+                    </select>
+
+                    <input id="velocidade2" type="button" value="0" placeholder="0" >
+                    <select id="velocidade2Escolha" name="Teste">
+                        <option class="opcao" value="Centimetros por segundo">Centímetros por segundo</option>
+                        <option class="opcao" value="Metros por segundo">Metros por segundo</option>
+                        <option class="opcao" value="Quilometros por hora">Quilômetros por hora</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="mainConversorTempo">
+                <div>
+                    <input id="tempo1" type="button" value="0" placeholder="0">
+                    <select id="tempo1Escolha" name="Teste">
+                        <option class="opcao" value="Segundos">Segundos</option>
+                        <option class="opcao" value="Minutos">Minutos</option>
+                        <option class="opcao" value="Horas">Horas</option>
+                    </select>
+
+                    <input id="tempo2" type="button" value="0" placeholder="0" >
+                    <select id="tempo2Escolha" name="Teste">
+                        <option class="opcao" value="Segundos">Segundos</option>
+                        <option class="opcao" value="Minutos">Minutos</option>
+                        <option class="opcao" value="Horas">Horas</option>
                     </select>
                 </div>
             </div>

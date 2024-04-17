@@ -27,18 +27,18 @@ botaoCalculadoraPadrao.addEventListener('click', () => {
 })
 /*--------------------------------------------------------------------------------------------------------*/
 
-/*--ESCOLHA CONVERSOR TEMPERATURA----ESCOLHA CONVERSOR TEMPERATURA----ESCOLHA CONVERSOR TEMPERATURA----ESCOLHA CONVERSOR TEMPERATURA--*/
-var temperaturaDisplay = false
-botaoTemperatura = document.querySelector('input#botaoTemperatura')
-botaoTemperatura.addEventListener('click', () => {
+/*--ESCOLHA CONVERSOR VOLUME----ESCOLHA CONVERSOR VOLUME----ESCOLHA CONVERSOR VOLUME----ESCOLHA CONVERSOR VOLUME--*/
+var volumeDisplay = false
+botaoVolume = document.querySelector('input#botaoVolume')
+botaoVolume.addEventListener('click', () => {
     navegacaoAbertoFechado = false
     menuNavegacao.style.width = '0px'
     menuNavegacao.style.visibility = 'hidden'
 
     displayNoneAll()
-    temperaturaDisplay = true
-    categoria.innerHTML = 'Temperatura'
-    mainConversorTemperatura.style.visibility = 'visible'
+    volumeDisplay = true
+    categoria.innerHTML = 'Volume'
+    mainConversorVolume.style.visibility = 'visible'
     botoesGeralConv.style.visibility = 'visible'
 })
 /*--------------------------------------------------------------------------------------------------------*/
@@ -59,6 +59,22 @@ botaoComprimento.addEventListener('click', () => {
 })
 /*--------------------------------------------------------------------------------------------------------*/
 
+/*--ESCOLHA CONVERSOR TEMPERATURA----ESCOLHA CONVERSOR TEMPERATURA----ESCOLHA CONVERSOR TEMPERATURA----ESCOLHA CONVERSOR TEMPERATURA--*/
+var temperaturaDisplay = false
+botaoTemperatura = document.querySelector('input#botaoTemperatura')
+botaoTemperatura.addEventListener('click', () => {
+    navegacaoAbertoFechado = false
+    menuNavegacao.style.width = '0px'
+    menuNavegacao.style.visibility = 'hidden'
+
+    displayNoneAll()
+    temperaturaDisplay = true
+    categoria.innerHTML = 'Temperatura'
+    mainConversorTemperatura.style.visibility = 'visible'
+    botoesGeralConv.style.visibility = 'visible'
+})
+/*--------------------------------------------------------------------------------------------------------*/
+
 /*--ESCOLHA CONVERSOR PESO----ESCOLHA CONVERSOR PESO----ESCOLHA CONVERSOR PESO----ESCOLHA CONVERSOR PESO--*/
 var pesoDisplay = false
 botaoPeso = document.querySelector('input#botaoPeso')
@@ -75,16 +91,80 @@ botaoPeso.addEventListener('click', () => {
 })
 /*--------------------------------------------------------------------------------------------------------*/
 
+/*--ESCOLHA CONVERSOR ÁREA----ESCOLHA CONVERSOR ÁREA----ESCOLHA CONVERSOR ÁREA----ESCOLHA CONVERSOR ÁREA--*/
+var areaDisplay = false
+botaoArea = document.querySelector('input#botaoArea')
+botaoArea.addEventListener('click', () => {
+    navegacaoAbertoFechado = false
+    menuNavegacao.style.width = '0px'
+    menuNavegacao.style.visibility = 'hidden'
+
+    displayNoneAll()
+    areaDisplay = true
+    categoria.innerHTML = 'Area'
+    mainConversorArea.style.visibility = 'visible'
+    botoesGeralConv.style.visibility = 'visible'
+})
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*--ESCOLHA CONVERSOR VELOCIDADE----ESCOLHA CONVERSOR VELOCIDADE----ESCOLHA CONVERSOR VELOCIDADE----ESCOLHA CONVERSOR VELOCIDADE--*/
+var velocidadeDisplay = false
+botaoVelocidade = document.querySelector('input#botaoVelocidade')
+botaoVelocidade.addEventListener('click', () => {
+    navegacaoAbertoFechado = false
+    menuNavegacao.style.width = '0px'
+    menuNavegacao.style.visibility = 'hidden'
+
+    displayNoneAll()
+    velocidadeDisplay = true
+    categoria.innerHTML = 'Velocidade'
+    mainConversorVelocidade.style.visibility = 'visible'
+    botoesGeralConv.style.visibility = 'visible'
+})
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*--ESCOLHA CONVERSOR TEMPO----ESCOLHA CONVERSOR TEMPO----ESCOLHA CONVERSOR TEMPO----ESCOLHA CONVERSOR TEMPO--*/
+var tempoDisplay = false
+botaoTempo = document.querySelector('input#botaoTempo')
+botaoTempo.addEventListener('click', () => {
+    navegacaoAbertoFechado = false
+    menuNavegacao.style.width = '0px'
+    menuNavegacao.style.visibility = 'hidden'
+
+    displayNoneAll()
+    tempoDisplay = true
+    categoria.innerHTML = 'Tempo'
+    mainConversorTempo.style.visibility = 'visible'
+    botoesGeralConv.style.visibility = 'visible'
+})
+/*--------------------------------------------------------------------------------------------------------*/
+
 /*--------------------------------------------------------------------------------------------------------*/
 function displayNoneAll() {
     mainCalculadoraPadrao.style.visibility = 'hidden'
     botoesCalculadoraPadrao.style.visibility = 'hidden'
-    mainConversorTemperatura.style.visibility = 'hidden'
-    temperaturaDisplay = false
+
+    mainConversorVolume.style.visibility = 'hidden'
+    volumeDisplay = false
+
     mainConversorComprimento.style.visibility = 'hidden'
     comprimentoDisplay = false
+
+    mainConversorTemperatura.style.visibility = 'hidden'
+    temperaturaDisplay = false
+
     mainConversorPeso.style.visibility = 'hidden'
     pesoDisplay = false
+
+    mainConversorArea.style.visibility = 'hidden'
+    areaDisplay = false
+
+    mainConversorVelocidade.style.visibility = 'hidden'
+    velocidadeDisplay = false
+
+    mainConversorTempo.style.visibility = 'hidden'
+    tempoDisplay = false
+
     botoesGeralConv.style.visibility = 'hidden'
 }
 /*--------------------------------------------------------------------------------------------------------*/
