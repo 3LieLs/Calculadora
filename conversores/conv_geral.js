@@ -22,6 +22,14 @@ setInterval(() => {
         convert2Escolha = comp2Escolha
         converter = converterComp()
     }
+
+    if (pesoDisplay == true) {
+        convert1 = peso1
+        convert2 = peso2
+        convert1Escolha = peso1Escolha
+        convert2Escolha = peso2Escolha
+        converter = converterPeso()
+    }
 }, 1);
 
 var num0Conv = document.querySelector('input#num0Conv')
@@ -214,8 +222,6 @@ function converterTemp() {
     }
 }
 
-
-
 temp1EscolhaInicial = temp1Escolha.value
 temp2EscolhaInicial = temp2Escolha.value
 setInterval(() => {
@@ -270,10 +276,62 @@ function converterComp() {
     }
 }
 
-
-
 comp1EscolhaInicial = comp1Escolha.value
 comp2EscolhaInicial = comp2Escolha.value
+setInterval(() => {
+    if (comp1EscolhaInicial != convert1Escolha.value) {
+        converter
+        comp1EscolhaInicial = convert1Escolha.value
+    }
+
+    if (comp2EscolhaInicial != convert2Escolha.value) {
+        converter
+        comp2EscolhaInicial = convert2Escolha.value
+    }
+}, 10);
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*--CONVERSÃO DE PESO----CONVERSÃO DE PESO----CONVERSÃO DE PESO----CONVERSÃO DE PESO--*/
+function converterPeso() {
+    let convert1Val
+
+    if (convert1Escolha.value == 'Miligramas' && convert2Escolha.value == 'Miligramas' || convert1Escolha.value == 'Gramas' && convert2Escolha.value == 'Gramas' || convert1Escolha.value == 'Quilogramas' && convert2Escolha.value == 'Quilogramas') {
+        convert2.value = convert1.value
+    }
+
+    if (convert1Escolha.value == 'Miligramas' && convert2Escolha.value == 'Gramas') {
+        convert1Val = Number(convert1.value) / 1000
+        convert2.value = convert1Val
+    }
+
+    if (convert1Escolha.value == 'Miligramas' && convert2Escolha.value == 'Quilogramas') {
+        convert1Val = Number(convert1.value) / 1000000
+        convert2.value = convert1Val
+    }
+
+    if (convert1Escolha.value == 'Gramas' && convert2Escolha.value == 'Miligramas') {
+        convert1Val = Number(convert1.value) * 1000
+        convert2.value = convert1Val
+    }
+
+    if (convert1Escolha.value == 'Gramas' && convert2Escolha.value == 'Quilogramas') {
+        convert1Val = Number(convert1.value) / 1000
+        convert2.value = convert1Val
+    }
+
+    if (convert1Escolha.value == 'Quilogramas' && convert2Escolha.value == 'Miligramas') {
+        convert1Val = Number(convert1.value) * 1000000
+        convert2.value = convert1Val
+    }
+
+    if (convert1Escolha.value == 'Quilogramas' && convert2Escolha.value == 'Gramas') {
+        convert1Val = Number(convert1.value) * 1000
+        convert2.value = convert1Val
+    }
+}
+
+peso1EscolhaInicial = peso1Escolha.value
+peso2EscolhaInicial = peso2Escolha.value
 setInterval(() => {
     if (comp1EscolhaInicial != convert1Escolha.value) {
         converter

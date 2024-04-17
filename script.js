@@ -59,6 +59,22 @@ botaoComprimento.addEventListener('click', () => {
 })
 /*--------------------------------------------------------------------------------------------------------*/
 
+/*--ESCOLHA CONVERSOR PESO----ESCOLHA CONVERSOR PESO----ESCOLHA CONVERSOR PESO----ESCOLHA CONVERSOR PESO--*/
+var pesoDisplay = false
+botaoPeso = document.querySelector('input#botaoPeso')
+botaoPeso.addEventListener('click', () => {
+    navegacaoAbertoFechado = false
+    menuNavegacao.style.width = '0px'
+    menuNavegacao.style.visibility = 'hidden'
+
+    displayNoneAll()
+    pesoDisplay = true
+    categoria.innerHTML = 'Peso'
+    mainConversorPeso.style.visibility = 'visible'
+    botoesGeralConv.style.visibility = 'visible'
+})
+/*--------------------------------------------------------------------------------------------------------*/
+
 /*--------------------------------------------------------------------------------------------------------*/
 function displayNoneAll() {
     mainCalculadoraPadrao.style.visibility = 'hidden'
@@ -67,6 +83,8 @@ function displayNoneAll() {
     temperaturaDisplay = false
     mainConversorComprimento.style.visibility = 'hidden'
     comprimentoDisplay = false
+    mainConversorPeso.style.visibility = 'hidden'
+    pesoDisplay = false
     botoesGeralConv.style.visibility = 'hidden'
 }
 /*--------------------------------------------------------------------------------------------------------*/

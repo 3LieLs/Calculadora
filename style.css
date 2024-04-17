@@ -82,6 +82,7 @@ main {
     width: 10%;
     background-color: gray;
     border: none;
+    cursor: pointer;
 }
 
 #menu>p {
@@ -97,7 +98,7 @@ main {
     top: 15%;
     width: 0px;
     height: 85%;
-    padding: 3% 0% 3% 1%;
+    padding: 3% 2% 3% 2%;
     background-color: rgb(74, 23, 126);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -128,6 +129,7 @@ main {
 #menuNavegacao>input:hover {
     background-color: gray;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -154,4 +156,5 @@ main {
 .botaoConv:hover {
     cursor: pointer;
     background-color: gray;
+    cursor: pointer;
 }
