@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="shortcut icon"
+        href="https://images.vexels.com/media/users/3/135553/isolated/preview/fe1680d9e81708fd79fc27b791401673-icone-de-calculadora-plana.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculadoras/calc_padrao.css">
+    <link rel="stylesheet" href="conversores/conv_geral.css">
+</head>
+
+<body>
+    <main>
+        <div id="topo">
+            <img class="logo"
+                src="https://images.vexels.com/media/users/3/135553/isolated/preview/fe1680d9e81708fd79fc27b791401673-icone-de-calculadora-plana.png"
+                alt="">
+            <p><strong>Calculadora</strong></p>
+        </div>
+        <div id="menu">
+            <input id="botaoNavegacao" type="button" value="|||">
+            <p id="categoria">Padrão</p>
+            <input id="historico" type="button" value="@" style="float: right;">
+        </div>
+
+        <div id="menuNavegacao">
+            <p>Calculadora</p>
+            <input id="botaoCalculadoraPadrao" type="button" value="Padrão">
+            <input type="button" value="Científica">
+            <p>Conversor</p>
+            <input type="button" value="Moeda">
+            <input type="button" value="Volume">
+            <input id="botaoComprimento" type="button" value="Comprimento">
+            <input type="button" value="Peso">
+            <input id="botaoTemperatura" type="button" value="Temperatura">
+            <input type="button" value="Energia">
+            <input type="button" value="Área">
+            <input type="button" value="Velocidade">
+            <input type="button" value="Tempo">
+            <input type="button" value="Potência">
+            <input type="button" value="Dados">
+            <input type="button" value="Pressão">
+            <input type="button" value="Ângulo">
+        </div>
+
+        <div id="mainCalculadora">
+            <div id="mainCalculadoraPadrao">
+                <div id="tela">
+                    <div id="calculoDisplay">
+                        <p id="calculo"></p>
+                    </div>
+
+                    <div id="resultadoDisplay">
+                        <p id="resultado"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="botoesCalculadoraPadrao">
+                <input id="limparRegistro" class="botao" type="button" value="CE">
+                <input id="limpar" class="botao" type="button" value="C">
+                <input id="deletar" class="botao" type="button" value="DEL">
+                <input id="calcular" class="botao" type="button" value="=">
+                <input id="num7" class="botao" type="button" value="7">
+                <input id="num8" class="botao" type="button" value="8">
+                <input id="num9" class="botao" type="button" value="9">
+                <input id="dividir" class="botao" type="button" value="/">
+                <input id="num4" class="botao" type="button" value="4">
+                <input id="num5" class="botao" type="button" value="5">
+                <input id="num6" class="botao" type="button" value="6">
+                <input id="multiplicar" class="botao" type="button" value="x">
+                <input id="num1" class="botao" type="button" value="1">
+                <input id="num2" class="botao" type="button" value="2">
+                <input id="num3" class="botao" type="button" value="3">
+                <input id="subtrair" class="botao" type="button" value="-">
+                <input id="resto" class="botao" type="button" value="%">
+                <input id="num0" class="botao" type="button" value="0">
+                <input id="virgula" class="botao" type="button" value=",">
+                <input id="somar" class="botao" type="button" value="+">
+            </div>
+        </div>
+
+
+        <div id="mainConversor">
+            <div id="mainConversorTemperatura">
+                <div>
+                    <input id="temp1" type="button" value="0" placeholder="0">
+                    <select id="temp1Escolha" name="Teste">
+                        <option class="opcao" value="Celsius">Celsius</option>
+                        <option class="opcao" value="Fahrenheit">Fahrenheit</option>
+                        <option class="opcao" value="Kelvin">Kelvin</option>
+                    </select>
+
+                    <input id="temp2" type="button" value="0" placeholder="0" >
+                    <select id="temp2Escolha" name="Teste">
+                        <option value="Celsius">Celsius</option>
+                        <option value="Fahrenheit">Fahrenheit</option>
+                        <option value="Kelvin">Kelvin</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="mainConversorComprimento">
+                <div>
+                    <input id="comp1" type="button" value="0" placeholder="0">
+                    <select id="comp1Escolha" name="Teste">
+                        <option class="opcao" value="Centimetros">Centimetros</option>
+                        <option class="opcao" value="Metros">Metros</option>
+                        <option class="opcao" value="Quilometros">Quilometros</option>
+                    </select>
+
+                    <input id="comp2" type="button" value="0" placeholder="0" >
+                    <select id="comp2Escolha" name="Teste">
+                        <option value="Centimetros">Centimetros</option>
+                        <option value="Metros">Metros</option>
+                        <option value="Quilometros">Quilometros</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="botoesGeralConv">
+                <input id="inverterConv" class="botaoConv" style="width: 15%; height: 7%;" type="button" value="^">
+                <input id="limparConv" class="botaoConv" style="margin-left: 18.3%;" type="button" value="CE">
+                <input id="deletarConv" class="botaoConv" type="button" value="DEL">
+                <input id="num7Conv" class="botaoConv" type="button" value="7">
+                <input id="num8Conv" class="botaoConv" type="button" value="8">
+                <input id="num9Conv" class="botaoConv" type="button" value="9">
+                <input id="num4Conv" class="botaoConv" type="button" value="4">
+                <input id="num5Conv" class="botaoConv" type="button" value="5">
+                <input id="num6Conv" class="botaoConv" type="button" value="6">
+                <input id="num1Conv" class="botaoConv" type="button" value="1">
+                <input id="num2Conv" class="botaoConv" type="button" value="2">
+                <input id="num3Conv" class="botaoConv" type="button" value="3">
+                <input id="sinalConv" class="botaoConv" type="button" value="+/-">
+                <input id="num0Conv" class="botaoConv" type="button" value="0">
+                <input id="virgulaConv" class="botaoConv" type="button" value=",">
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="calculadoras/calc_padrao.js"></script>
+    <script src="conversores/conv_geral.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+#mainCalculadoraPadrao {
+    visibility: visible;
+}
+
+#tela {
+    width: 100%;
+    height: 30%;
+    padding: 3%;
+}
+
+#calculoDisplay {
+    margin-top: 20%;
+    float: right;
+    font-size: 15pt;
+}
+
+#resultadoDisplay {
+    clear: right;
+    float: right;
+    font-size: 25pt;
+}
+
+#botoesCalculadoraPadrao{
+    position: absolute;
+    bottom: 0%;
+    padding: 1% 1% 1% 1%;
+    width: 100%;
+    height: 60%;
+}
+
+.botao {
+    float: left;
+    width: 25%;
+    height: 20%;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20pt;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    cursor: pointer;
+    background-color: gray;
+}
