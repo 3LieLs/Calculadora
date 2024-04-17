@@ -68,74 +68,91 @@ num9.addEventListener('click', () => {
 
 var somar = document.querySelector('input#somar')
 somar.addEventListener('click', () => {
-    operadoresTotal[iOpe] = `somar`
-    Number(numeros)
-    numerosTotal[iNum] = numeros
+    if (numeros != '') {
+        virgulaAtiv = false
+        operadoresTotal[iOpe] = `somar`
+        Number(numeros)
+        numerosTotal[iNum] = numeros
 
-    numeros = ''
-    resultado.innerHTML = `${numeros}`
-    calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} + `)
+        numeros = ''
+        resultado.innerHTML = `${numeros}`
+        calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} + `)
 
-    iOpe++
-    iNum++
+        iOpe++
+        iNum++
+    }
 })
 
 var subtrair = document.querySelector('input#subtrair')
 subtrair.addEventListener('click', () => {
-    operadoresTotal[iOpe] = `subtrair`
-    Number(numeros)
-    numerosTotal[iNum] = numeros
+    if (numeros != '') {
+        virgulaAtiv = false
+        operadoresTotal[iOpe] = `subtrair`
+        Number(numeros)
+        numerosTotal[iNum] = numeros
 
-    numeros = ''
-    resultado.innerHTML = `${numeros}`
-    calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} - `)
+        numeros = ''
+        resultado.innerHTML = `${numeros}`
+        calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} - `)
 
-    iOpe++
-    iNum++
+        iOpe++
+        iNum++
+    }
 })
 
 var multiplicar = document.querySelector('input#multiplicar')
 multiplicar.addEventListener('click', () => {
-    operadoresTotal[iOpe] = `multiplicar`
-    Number(numeros)
-    numerosTotal[iNum] = numeros
+    if (numeros != '') {
+        virgulaAtiv = false
+        operadoresTotal[iOpe] = `multiplicar`
+        Number(numeros)
+        numerosTotal[iNum] = numeros
 
-    numeros = ''
-    resultado.innerHTML = `${numeros}`
-    calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} * `)
+        numeros = ''
+        resultado.innerHTML = `${numeros}`
+        calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} * `)
 
-    iOpe++
-    iNum++
+        iOpe++
+        iNum++
+    }
 })
 
 var dividir = document.querySelector('input#dividir')
 dividir.addEventListener('click', () => {
-    operadoresTotal[iOpe] = `dividir`
-    Number(numeros)
-    numerosTotal[iNum] = numeros
+    if (numeros != '') {
+        virgulaAtiv = false
+        operadoresTotal[iOpe] = `dividir`
+        Number(numeros)
+        numerosTotal[iNum] = numeros
 
-    numeros = ''
-    resultado.innerHTML = `${numeros}`
-    calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} / `)
+        numeros = ''
+        resultado.innerHTML = `${numeros}`
+        calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} / `)
 
-    iOpe++
-    iNum++
+        iOpe++
+        iNum++
+    }
 })
 
-var resto = document.querySelector('input#resto')
-resto.addEventListener('click', () => {
-    operadoresTotal[iOpe] = `somar`
-    Number(numeros)
-    numerosTotal[iNum] = numeros
 
-    numeros = ''
-    resultado.innerHTML = `${numeros}`
-    calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} % `)
 
-    iOpe++
-    iNum++
+var sinal = document.querySelector('input#sinal')
+sinal.addEventListener('click', () => {
+    if (numeros != '') {
+        numeros = Number(numeros) * -1
+        resultado.innerHTML = `${numeros}`
+    }
 })
 
+var virgulaAtiv = false
+var virgula = document.querySelector('input#virgula')
+virgula.addEventListener('click', () => {
+    if (virgulaAtiv == false && numeros != '') {
+        numeros += '.'
+        resultado.innerHTML = `${numeros}`
+        virgulaAtiv = true
+    }
+})
 
 var limparRegistro = document.querySelector('input#limparRegistro')
 //limparRegistro.addEventListener('click', funcaoCalculo)
@@ -145,9 +162,10 @@ limpar.addEventListener('click', () => {
     numeros = ''
     resultado.innerText = `${numeros}`
     calculo.innerText = ``
+    virgulaAtiv = false
 
-        operadoresTotal.splice(0, operadoresTotal.length)
-        numerosTotal.splice(0, numerosTotal.length)
+    operadoresTotal.splice(0, operadoresTotal.length)
+    numerosTotal.splice(0, numerosTotal.length)
 
     resultadoTotal = 0
     iOpe = 0
@@ -156,37 +174,42 @@ limpar.addEventListener('click', () => {
 
 var deletar = document.querySelector('input#deletar')
 deletar.addEventListener('click', () => {
+    if (numeros[numeros.length - 1] == '.') {
+        virgulaAtiv = false
+    }
     numeros = numeros.slice(0, -1)
     resultado.innerHTML = `${numeros}`
 })
 
+
 var calcular = document.querySelector('input#calcular')
 calcular.addEventListener('click', () => {
+    virgulaAtiv = false
     Number(numeros)
 
     resultadoTotal = parseFloat(numerosTotal[0])
 
     for (let x = 1; x < numerosTotal.length; x++) {
-        if (operadoresTotal[x-1] == "somar") {
+        if (operadoresTotal[x - 1] == "somar") {
             resultadoTotal += parseFloat(numerosTotal[x])
         }
 
-        if (operadoresTotal[x-1] == "subtrair") {
+        if (operadoresTotal[x - 1] == "subtrair") {
             resultadoTotal -= parseFloat(numerosTotal[x])
         }
 
-        if (operadoresTotal[x-1] == "multiplicar") {
+        if (operadoresTotal[x - 1] == "multiplicar") {
             resultadoTotal *= parseFloat(numerosTotal[x])
         }
 
-        if (operadoresTotal[x-1] == "dividir") {
+        if (operadoresTotal[x - 1] == "dividir") {
             resultadoTotal /= parseFloat(numerosTotal[x])
         }
 
         iNum++
     }
 
-    if (operadoresTotal[numerosTotal.length-1] == "somar") {
+    if (operadoresTotal[numerosTotal.length - 1] == "somar") {
         if (numeros == '') {
             numeros = ''
         } else {
@@ -194,7 +217,7 @@ calcular.addEventListener('click', () => {
         }
     }
 
-    if (operadoresTotal[numerosTotal.length-1] == "subtrair") {
+    if (operadoresTotal[numerosTotal.length - 1] == "subtrair") {
         if (numeros == '') {
             numeros = ''
         } else {
@@ -202,7 +225,7 @@ calcular.addEventListener('click', () => {
         }
     }
 
-    if (operadoresTotal[numerosTotal.length-1] == "multiplicar") {
+    if (operadoresTotal[numerosTotal.length - 1] == "multiplicar") {
         if (numeros == '') {
             numeros = ''
         } else {
@@ -210,7 +233,7 @@ calcular.addEventListener('click', () => {
         }
     }
 
-    if (operadoresTotal[numerosTotal.length-1] == "dividir") {
+    if (operadoresTotal[numerosTotal.length - 1] == "dividir") {
         if (numeros == '') {
             numeros = ''
         } else {
@@ -220,6 +243,11 @@ calcular.addEventListener('click', () => {
 
     calculo.insertAdjacentHTML('beforeend', ` ${numeros} = `)
     resultado.innerHTML = `${resultadoTotal}`
+
+    add = document.createElement("p");
+    add.innerHTML = `${calculo.innerHTML} ${resultadoTotal}`;
+    historico.appendChild(add);
+    hist ++
 })
 
 var virgula = document.querySelector('input#virgula')

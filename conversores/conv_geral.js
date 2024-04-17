@@ -168,14 +168,14 @@ num9Conv.addEventListener('click', () => {
 var limparConv = document.querySelector('input#limparConv')
 limparConv.addEventListener('click', () => {
     convert1.value = '0'
-    virgula = false
+    virgulaAtivConv = false
     converter
 })
 
 var deletarConv = document.querySelector('input#deletarConv')
 deletarConv.addEventListener('click', () => {
     if (convert1.value[convert1.value.length - 1] == '.') {
-        virgula = false
+        virgulaAtivConv = false
     }
     convert1.value = convert1.value.slice(0, -1)
     if (convert1.value == '') {
@@ -190,12 +190,12 @@ sinalConv.addEventListener('click', () => {
     converter
 })
 
-var virgula = false
+var virgulaAtivConv = false
 var virgulaConv = document.querySelector('input#virgulaConv')
 virgulaConv.addEventListener('click', () => {
-    if (virgula == false) {
+    if (virgulaAtivConv == false) {
         convert1.value += '.'
-        virgula = true
+        virgulaAtivConv = true
         converter
     }
 })
