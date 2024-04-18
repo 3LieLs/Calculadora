@@ -23,17 +23,17 @@
 #botoesCalculadoraPadrao{
     position: absolute;
     bottom: 0%;
-    padding: 1% 1% 1% 1%;
     width: 100%;
     height: 60%;
+    background: radial-gradient(circle, rgba(30,45,64,1) 27%, rgba(13,13,13,1) 100%);
 }
 
 .botao {
     float: left;
     width: 25%;
     height: 20%;
+    background: none;
     border: 1px solid black;
-    border-radius: 5px;
     font-size: 20pt;
     transition: 0.3s;
 }

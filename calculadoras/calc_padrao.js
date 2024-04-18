@@ -8,59 +8,89 @@ var resultado = document.querySelector('p#resultado')
 
 var num0 = document.querySelector('input#num0')
 num0.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     numeros += '0'
     resultado.innerHTML = `${numeros}`
 })
 
 var num1 = document.querySelector('input#num1')
 num1.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     numeros += '1'
     resultado.innerHTML = `${numeros}`
 })
 
 var num2 = document.querySelector('input#num2')
 num2.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     numeros += '2'
     resultado.innerHTML = `${numeros}`
 })
 
 var num3 = document.querySelector('input#num3')
 num3.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     numeros += '3'
     resultado.innerHTML = `${numeros}`
 })
 
 var num4 = document.querySelector('input#num4')
 num4.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     numeros += '4'
     resultado.innerHTML = `${numeros}`
 })
 var num5 = document.querySelector('input#num5')
 num5.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     numeros += '5'
     resultado.innerHTML = `${numeros}`
 })
 
 var num6 = document.querySelector('input#num6')
 num6.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     numeros += '6'
     resultado.innerHTML = `${numeros}`
 })
 
 var num7 = document.querySelector('input#num7')
 num7.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     numeros += '7'
     resultado.innerHTML = `${numeros}`
 })
 
 var num8 = document.querySelector('input#num8')
 num8.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     numeros += '8'
     resultado.innerHTML = `${numeros}`
 })
 
 var num9 = document.querySelector('input#num9')
 num9.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     numeros += '9'
     resultado.innerHTML = `${numeros}`
 })
@@ -159,6 +189,9 @@ var limparRegistro = document.querySelector('input#limparRegistro')
 
 var limpar = document.querySelector('input#limpar')
 limpar.addEventListener('click', () => {
+    reset()
+})
+function reset() {
     numeros = ''
     resultado.innerText = `${numeros}`
     calculo.innerText = ``
@@ -170,7 +203,8 @@ limpar.addEventListener('click', () => {
     resultadoTotal = 0
     iOpe = 0
     iNum = 0
-})
+    proximoCalculo = false
+}
 
 var deletar = document.querySelector('input#deletar')
 deletar.addEventListener('click', () => {
@@ -182,6 +216,7 @@ deletar.addEventListener('click', () => {
 })
 
 
+var proximoCalculo = false
 var calcular = document.querySelector('input#calcular')
 calcular.addEventListener('click', () => {
     virgulaAtiv = false
@@ -247,8 +282,6 @@ calcular.addEventListener('click', () => {
     add = document.createElement("p");
     add.innerHTML = `${calculo.innerHTML} ${resultadoTotal}`;
     historico.appendChild(add);
-    hist ++
+    hist++
+    proximoCalculo = true
 })
-
-var virgula = document.querySelector('input#virgula')
-//virgula.addEventListener('click', funcaoCalculo)
