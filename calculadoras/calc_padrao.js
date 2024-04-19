@@ -5,7 +5,7 @@ var operadoresTotal = [], iOpe = 0
 var calculo = document.querySelector('p#calculo')
 var resultado = document.querySelector('p#resultado')
 
-
+/*--NÚMEROS----NÚMEROS----NÚMEROS----NÚMEROS--*/
 var num0 = document.querySelector('input#num0')
 num0.addEventListener('click', () => {
     if (proximoCalculo == true) {
@@ -95,80 +95,54 @@ num9.addEventListener('click', () => {
     resultado.innerHTML = `${numeros}`
 })
 
-
+/*--OPERADORES----OPERADORES----OPERADORES----OPERADORES--*/
 var somar = document.querySelector('input#somar')
 somar.addEventListener('click', () => {
-    if (numeros != '') {
-        virgulaAtiv = false
-        operadoresTotal[iOpe] = `somar`
-        Number(numeros)
-        numerosTotal[iNum] = numeros
-
-        numeros = ''
-        resultado.innerHTML = `${numeros}`
-        calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} + `)
-
-        iOpe++
-        iNum++
-    }
+    operadorFunc('somar', '+')
 })
 
 var subtrair = document.querySelector('input#subtrair')
 subtrair.addEventListener('click', () => {
-    if (numeros != '') {
-        virgulaAtiv = false
-        operadoresTotal[iOpe] = `subtrair`
-        Number(numeros)
-        numerosTotal[iNum] = numeros
-
-        numeros = ''
-        resultado.innerHTML = `${numeros}`
-        calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} - `)
-
-        iOpe++
-        iNum++
-    }
+    operadorFunc('subtrair', '-')
 })
 
 var multiplicar = document.querySelector('input#multiplicar')
 multiplicar.addEventListener('click', () => {
-    if (numeros != '') {
-        virgulaAtiv = false
-        operadoresTotal[iOpe] = `multiplicar`
-        Number(numeros)
-        numerosTotal[iNum] = numeros
-
-        numeros = ''
-        resultado.innerHTML = `${numeros}`
-        calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} * `)
-
-        iOpe++
-        iNum++
-    }
+    operadorFunc('multiplicar', '*')
 })
 
 var dividir = document.querySelector('input#dividir')
 dividir.addEventListener('click', () => {
+    operadorFunc('dividir', '/')
+})
+
+function operadorFunc(ope1, ope2) {
+    if (proximoCalculo == true) {
+        reset()
+    }
     if (numeros != '') {
         virgulaAtiv = false
-        operadoresTotal[iOpe] = `dividir`
+        operadoresTotal[iOpe] = ope1
         Number(numeros)
         numerosTotal[iNum] = numeros
 
         numeros = ''
         resultado.innerHTML = `${numeros}`
-        calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} / `)
+        calculo.insertAdjacentHTML('beforeend', `${numerosTotal[iNum]} ${ope2} `)
 
         iOpe++
         iNum++
     }
-})
+}
+/*--------------------------------------------------------------------------------------------------------*/
 
-
-
+/*--OUTROS----OUTROS----OUTROS----OUTROS--*/
 var sinal = document.querySelector('input#sinal')
 sinal.addEventListener('click', () => {
-    if (numeros != '') {
+    if (proximoCalculo == true) {
+        reset()
+    }
+    if (numeros != '' && numeros != '0') {
         numeros = Number(numeros) * -1
         resultado.innerHTML = `${numeros}`
     }
@@ -177,6 +151,9 @@ sinal.addEventListener('click', () => {
 var virgulaAtiv = false
 var virgula = document.querySelector('input#virgula')
 virgula.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     if (virgulaAtiv == false && numeros != '') {
         numeros += '.'
         resultado.innerHTML = `${numeros}`
@@ -184,8 +161,27 @@ virgula.addEventListener('click', () => {
     }
 })
 
+var deletar = document.querySelector('input#deletar')
+deletar.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
+    if (numeros[numeros.length - 1] == '.') {
+        virgulaAtiv = false
+    }
+    numeros = numeros.slice(0, -1)
+    resultado.innerHTML = `${numeros}`
+})
+
 var limparRegistro = document.querySelector('input#limparRegistro')
-//limparRegistro.addEventListener('click', funcaoCalculo)
+limparRegistro.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
+    numeros = ''
+    resultado.innerText = `${numeros}`
+    virgulaAtiv = false
+})
 
 var limpar = document.querySelector('input#limpar')
 limpar.addEventListener('click', () => {
@@ -205,20 +201,15 @@ function reset() {
     iNum = 0
     proximoCalculo = false
 }
+/*--------------------------------------------------------------------------------------------------------*/
 
-var deletar = document.querySelector('input#deletar')
-deletar.addEventListener('click', () => {
-    if (numeros[numeros.length - 1] == '.') {
-        virgulaAtiv = false
-    }
-    numeros = numeros.slice(0, -1)
-    resultado.innerHTML = `${numeros}`
-})
-
-
+/*--RESULTADO----RESULTADO----RESULTADO----RESULTADO--*/
 var proximoCalculo = false
 var calcular = document.querySelector('input#calcular')
 calcular.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
     virgulaAtiv = false
     Number(numeros)
 
@@ -285,3 +276,4 @@ calcular.addEventListener('click', () => {
     hist++
     proximoCalculo = true
 })
+/*--------------------------------------------------------------------------------------------------------*/

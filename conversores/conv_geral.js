@@ -64,6 +64,8 @@ setInterval(() => {
     }
 }, 1);
 
+
+/*--NÚMEROS----NÚMEROS----NÚMEROS----NÚMEROS--*/
 var num0Conv = document.querySelector('input#num0Conv')
 num0Conv.addEventListener('click', () => {
     if (convert1.value == '0') {
@@ -162,28 +164,9 @@ num9Conv.addEventListener('click', () => {
     }
     converter
 })
+/*--------------------------------------------------------------------------------------------------------*/
 
-
-
-var limparConv = document.querySelector('input#limparConv')
-limparConv.addEventListener('click', () => {
-    convert1.value = '0'
-    virgulaAtivConv = false
-    converter
-})
-
-var deletarConv = document.querySelector('input#deletarConv')
-deletarConv.addEventListener('click', () => {
-    if (convert1.value[convert1.value.length - 1] == '.') {
-        virgulaAtivConv = false
-    }
-    convert1.value = convert1.value.slice(0, -1)
-    if (convert1.value == '') {
-        convert1.value = '0'
-    }
-    converter
-})
-
+/*--OUTROS----OUTROS----OUTROS----OUTROS--*/
 var sinalConv = document.querySelector('input#sinalConv')
 sinalConv.addEventListener('click', () => {
     convert1.value = Number(convert1.value) * -1
@@ -205,6 +188,25 @@ inverterConv.addEventListener('click', () => {
     let temp1EscolhaAntigo = convert1Escolha.value
     convert1Escolha.value = convert2Escolha.value
     convert2Escolha.value = temp1EscolhaAntigo
+    converter
+})
+
+var limparConv = document.querySelector('input#limparConv')
+limparConv.addEventListener('click', () => {
+    convert1.value = '0'
+    virgulaAtivConv = false
+    converter
+})
+
+var deletarConv = document.querySelector('input#deletarConv')
+deletarConv.addEventListener('click', () => {
+    if (convert1.value[convert1.value.length - 1] == '.') {
+        virgulaAtivConv = false
+    }
+    convert1.value = convert1.value.slice(0, -1)
+    if (convert1.value == '') {
+        convert1.value = '0'
+    }
     converter
 })
 /*--------------------------------------------------------------------------------------------------------*/

@@ -33,12 +33,11 @@
     width: 25%;
     height: 20%;
     background: none;
-    border: 1px solid black;
+    border: none;
     font-size: 20pt;
     transition: 0.3s;
 }
 
 .botao:hover {
-    cursor: pointer;
     background-color: gray;
 }
