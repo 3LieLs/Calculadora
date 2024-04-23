@@ -11,6 +11,7 @@
         type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="calculadoras/calc_padrao.css">
+    <link rel="stylesheet" href="calculadoras/calc_cientifica.css">
     <link rel="stylesheet" href="conversores/conv_geral.css">
 </head>
 
@@ -31,7 +32,7 @@
         <div id="menuNavegacao">
             <p>Calculadora</p>
             <input id="botaoCalculadoraPadrao" type="button" value="Padrão">
-            <input type="button" value="Científica">
+            <input id="botaoCalculadoraCientifica" type="button" value="Científica">
             <p>Conversor</p>
             <input id="botaoMoeda" type="button" value="Moeda">
             <input id="botaoVolume" type="button" value="Volume">
@@ -50,7 +51,7 @@
         </div>
 
         <div id="mainCalculadora">
-            <div id="mainCalculadoraPadrao">
+            <div id="mainCalculadoraDisplay">
                 <div id="tela">
                     <div id="calculoDisplay">
                         <p id="calculo"></p>
@@ -84,8 +85,40 @@
                 <input id="virgula" class="botao" type="button" value=",">
                 <input id="somar" class="botao" type="button" value="+">
             </div>
+
+            <div id="botoesCalculadoraCientifica">
+                <input id="PI" class="botaoCientifico" type="button" value="PI">
+                <input id="limparRegistroCientifico" class="botaoCientifico" type="button" value="CE">
+                <input id="limparCientifico" class="botaoCientifico" type="button" value="C">
+                <input id="deletarCientifico" class="botaoCientifico" type="button" value="DEL">
+                <input id="calcularCientifico" class="botaoCientifico" type="button" value="=">
+                <input id="raizQuadrada" class="botaoCientifico" type="button" value="Raiz">
+                <input id="num7Cientifico" class="botaoCientifico" type="button" value="7">
+                <input id="num8Cientifico" class="botaoCientifico" type="button" value="8">
+                <input id="num9Cientifico" class="botaoCientifico" type="button" value="9">
+                <input id="dividirCientifico" class="botaoCientifico" type="button" value="/">
+                <input id="10ˣ" class="botaoCientifico" type="button" value="10ˣ">
+                <input id="num4Cientifico" class="botaoCientifico" type="button" value="4">
+                <input id="num5Cientifico" class="botaoCientifico" type="button" value="5">
+                <input id="num6Cientifico" class="botaoCientifico" type="button" value="6">
+                <input id="multiplicarCientifico" class="botaoCientifico" type="button" value="x">
+                <input id="xʸ" class="botaoCientifico" type="button" value="xʸ">
+                <input id="num1Cientifico" class="botaoCientifico" type="button" value="1">
+                <input id="num2Cientifico" class="botaoCientifico" type="button" value="2">
+                <input id="num3Cientifico" class="botaoCientifico" type="button" value="3">
+                <input id="subtrairCientifico" class="botaoCientifico" type="button" value="-">
+                <input id="x²" class="botaoCientifico" type="button" value="x²">
+                <input id="sinalCientifico" class="botaoCientifico" type="button" value="+/-">
+                <input id="num0Cientifico" class="botaoCientifico" type="button" value="0">
+                <input id="virgulaCientifico" class="botaoCientifico" type="button" value=",">
+                <input id="somarCientifico" class="botaoCientifico" type="button" value="+">
+                <input id="log" class="botaoCientifico" type="button" value="Log">
+                <input id="resto" class="botaoCientifico" type="button" value="Resto">
+                <input id="porcentagem" class="botaoCientifico" type="button" value="%">
+            </div>
         </div>
 
+        
 
         <div id="mainConversor">
             <div id="mainConversorVolume">
@@ -235,6 +268,7 @@
 
     <script src="script.js"></script>
     <script src="calculadoras/calc_padrao.js"></script>
+    <script src="calculadoras/calc_cientifica.js"></script>
     <script src="conversores/conv_geral.js"></script>
 </body>
 

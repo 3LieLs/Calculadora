@@ -42,14 +42,30 @@ limparHistorico.addEventListener('click', () => {
 /*--ESCOLHA CALCULADORA PADRÃO----ESCOLHA CALCULADORA PADRÃO----ESCOLHA CALCULADORA PADRÃO----ESCOLHA CALCULADORA PADRÃO--*/
 botaoCalculadoraPadrao = document.querySelector('input#botaoCalculadoraPadrao')
 botaoCalculadoraPadrao.addEventListener('click', () => {
+    reset()
     navegacaoAbertoFechado = false
     menuNavegacao.style.width = '0px'
     menuNavegacao.style.visibility = 'hidden'
 
     displayNoneAll()
     categoria.innerHTML = 'Padrão'
-    mainCalculadoraPadrao.style.visibility = 'visible'
+    mainCalculadoraDisplay.style.visibility = 'visible'
     botoesCalculadoraPadrao.style.visibility = 'visible'
+})
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*--ESCOLHA CALCULADORA CIENTÍFICA----ESCOLHA CALCULADORA CIENTÍFICA----ESCOLHA CALCULADORA CIENTÍFICA----ESCOLHA CALCULADORA CIENTÍFICA--*/
+botaoCalculadoraCientifica = document.querySelector('input#botaoCalculadoraCientifica')
+botaoCalculadoraCientifica.addEventListener('click', () => {
+    reset()
+    navegacaoAbertoFechado = false
+    menuNavegacao.style.width = '0px'
+    menuNavegacao.style.visibility = 'hidden'
+
+    displayNoneAll()
+    categoria.innerHTML = 'Científica'
+    mainCalculadoraDisplay.style.visibility = 'visible'
+    botoesCalculadoraCientifica.style.visibility = 'visible'
 })
 /*--------------------------------------------------------------------------------------------------------*/
 
@@ -167,8 +183,9 @@ botaoTempo.addEventListener('click', () => {
 
 /*--------------------------------------------------------------------------------------------------------*/
 function displayNoneAll() {
-    mainCalculadoraPadrao.style.visibility = 'hidden'
+    mainCalculadoraDisplay.style.visibility = 'hidden'
     botoesCalculadoraPadrao.style.visibility = 'hidden'
+    botoesCalculadoraCientifica.style.visibility = 'hidden'
 
     mainConversorVolume.style.visibility = 'hidden'
     volumeDisplay = false
@@ -190,7 +207,7 @@ function displayNoneAll() {
 
     mainConversorTempo.style.visibility = 'hidden'
     tempoDisplay = false
-
+    
     botoesGeralConv.style.visibility = 'hidden'
 }
 /*--------------------------------------------------------------------------------------------------------*/

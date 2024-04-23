@@ -1,0 +1,13 @@
+.botaoCientifico {
+    float: left;
+    width: 20%;
+    height: 16%;
+    background: none;
+    border: none;
+    font-size: 20pt;
+    transition: 0.3s;
+}
+
+.botaoCientifico:hover {
+    background-color: gray;
+}
