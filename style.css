@@ -143,6 +143,7 @@ main {
     border-radius: 15px;
     z-index: 9999;
     transition: 0.3s;
+    overflow: auto;
 }
 
 #historico>p {
@@ -152,8 +153,8 @@ main {
 
 #historico>input {
     position: absolute;
-    bottom: 3%;
-    right: 3%;
+    top: 0%;
+    left: 0%;
     padding: 2%;
     background-color: black;
     border: none;

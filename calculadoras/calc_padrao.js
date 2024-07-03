@@ -95,6 +95,17 @@ num9.addEventListener('click', () => {
     resultado.innerHTML = `${numeros}`
 })
 
+var PI = document.querySelector('input#PI')
+PI.addEventListener('click', () => {
+    if (proximoCalculo == true) {
+        reset()
+    }
+    let pi = Math.PI
+    toString(pi)
+    numeros += pi
+    resultado.innerHTML = `${numeros}`
+})
+
 /*--OPERADORES----OPERADORES----OPERADORES----OPERADORES--*/
 var somar = document.querySelector('input#somar')
 somar.addEventListener('click', () => {
@@ -114,6 +125,26 @@ multiplicar.addEventListener('click', () => {
 var dividir = document.querySelector('input#dividir')
 dividir.addEventListener('click', () => {
     operadorFunc('dividir', '/')
+})
+
+var potencia = document.querySelector('input#potencia')
+potencia.addEventListener('click', () => {
+    operadorFunc('potencia', '^')
+})
+
+var raizQuadrada = document.querySelector('input#raizQuadrada')
+raizQuadrada.addEventListener('click', () => {
+    operadorFunc('raizQuadrada', '²√')
+})
+
+var resto = document.querySelector('input#resto')
+resto.addEventListener('click', () => {
+    operadorFunc('resto', '%')
+})
+
+var logaritimo = document.querySelector('input#logaritimo')
+logaritimo.addEventListener('click', () => {
+    operadorFunc('logaritimo', '%')
 })
 
 function operadorFunc(ope1, ope2) {
@@ -232,6 +263,22 @@ calcular.addEventListener('click', () => {
             resultadoTotal /= parseFloat(numerosTotal[x])
         }
 
+        if (operadoresTotal[x - 1] == "potencia") {
+            resultadoTotal **= parseFloat(numerosTotal[x])
+        }
+
+        if (operadoresTotal[x - 1] == "raizQuadrada") {
+            resultadoTotal = Math.sqrt(parseFloat(numerosTotal[x]))
+        }
+
+        if (operadoresTotal[x - 1] == "resto") {
+            resultadoTotal %= parseFloat(numerosTotal[x])
+        }
+
+        if (operadoresTotal[x - 1] == "logaritimo") {
+            resultadoTotal = Math.log(parseFloat(numerosTotal[x]))
+        }
+
         iNum++
     }
 
@@ -264,6 +311,38 @@ calcular.addEventListener('click', () => {
             numeros = ''
         } else {
             resultadoTotal /= parseFloat(numeros)
+        }
+    }
+
+    if (operadoresTotal[numerosTotal.length - 1] == "potencia") {
+        if (numeros == '') {
+            numeros = ''
+        } else {
+            resultadoTotal **= parseFloat(numeros)
+        }
+    }
+
+    if (operadoresTotal[numerosTotal.length - 1] == "raizQuadrada") {
+        if (numeros == '') {
+            numeros = ''
+        } else {
+            resultadoTotal = Math.sqrt(parseFloat(numeros))
+        }
+    }
+
+    if (operadoresTotal[numerosTotal.length - 1] == "resto") {
+        if (numeros == '') {
+            numeros = ''
+        } else {
+            resultadoTotal %= parseFloat(numeros)
+        }
+    }
+
+    if (operadoresTotal[numerosTotal.length - 1] == "logaritimo") {
+        if (numeros == '') {
+            numeros = ''
+        } else {
+            resultadoTotal = Math.log(parseFloat(numeros)) 
         }
     }
 

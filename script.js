@@ -54,21 +54,6 @@ botaoCalculadoraPadrao.addEventListener('click', () => {
 })
 /*--------------------------------------------------------------------------------------------------------*/
 
-/*--ESCOLHA CALCULADORA CIENTÍFICA----ESCOLHA CALCULADORA CIENTÍFICA----ESCOLHA CALCULADORA CIENTÍFICA----ESCOLHA CALCULADORA CIENTÍFICA--*/
-botaoCalculadoraCientifica = document.querySelector('input#botaoCalculadoraCientifica')
-botaoCalculadoraCientifica.addEventListener('click', () => {
-    reset()
-    navegacaoAbertoFechado = false
-    menuNavegacao.style.width = '0px'
-    menuNavegacao.style.visibility = 'hidden'
-
-    displayNoneAll()
-    categoria.innerHTML = 'Científica'
-    mainCalculadoraDisplay.style.visibility = 'visible'
-    botoesCalculadoraCientifica.style.visibility = 'visible'
-})
-/*--------------------------------------------------------------------------------------------------------*/
-
 /*--ESCOLHA CONVERSOR VOLUME----ESCOLHA CONVERSOR VOLUME----ESCOLHA CONVERSOR VOLUME----ESCOLHA CONVERSOR VOLUME--*/
 var volumeDisplay = false
 botaoVolume = document.querySelector('input#botaoVolume')
@@ -185,7 +170,6 @@ botaoTempo.addEventListener('click', () => {
 function displayNoneAll() {
     mainCalculadoraDisplay.style.visibility = 'hidden'
     botoesCalculadoraPadrao.style.visibility = 'hidden'
-    botoesCalculadoraCientifica.style.visibility = 'hidden'
 
     mainConversorVolume.style.visibility = 'hidden'
     volumeDisplay = false

@@ -11,7 +11,6 @@
         type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="calculadoras/calc_padrao.css">
-    <link rel="stylesheet" href="calculadoras/calc_cientifica.css">
     <link rel="stylesheet" href="conversores/conv_geral.css">
 </head>
 
@@ -64,57 +63,31 @@
             </div>
 
             <div id="botoesCalculadoraPadrao">
+                <input id="PI" class="botao" type="button" value="PI">
                 <input id="limparRegistro" class="botao" type="button" value="CE">
                 <input id="limpar" class="botao" type="button" value="C">
                 <input id="deletar" class="botao" type="button" value="DEL">
                 <input id="calcular" class="botao" type="button" value="=">
+                <input id="potencia" class="botao" type="button" value="xⁿ">
                 <input id="num7" class="botao" type="button" value="7">
                 <input id="num8" class="botao" type="button" value="8">
                 <input id="num9" class="botao" type="button" value="9">
-                <input id="dividir" class="botao" type="button" value="/">
+                <input id="dividir" class="botao" type="button" value="÷">
+                <input id="raizQuadrada" class="botao" type="button" value="²√">
                 <input id="num4" class="botao" type="button" value="4">
                 <input id="num5" class="botao" type="button" value="5">
                 <input id="num6" class="botao" type="button" value="6">
-                <input id="multiplicar" class="botao" type="button" value="x">
+                <input id="multiplicar" class="botao" type="button" value="×">
+                <input id="resto" class="botao" type="button" value="%">
                 <input id="num1" class="botao" type="button" value="1">
                 <input id="num2" class="botao" type="button" value="2">
                 <input id="num3" class="botao" type="button" value="3">
-                <input id="subtrair" class="botao" type="button" value="-">
+                <input id="subtrair" class="botao" type="button" value="−">
+                <input id="logaritimo" class="botao" type="button" value="log">
                 <input id="sinal" class="botao" type="button" value="+/-">
                 <input id="num0" class="botao" type="button" value="0">
                 <input id="virgula" class="botao" type="button" value=",">
                 <input id="somar" class="botao" type="button" value="+">
-            </div>
-
-            <div id="botoesCalculadoraCientifica">
-                <input id="PI" class="botaoCientifico" type="button" value="PI">
-                <input id="limparRegistroCientifico" class="botaoCientifico" type="button" value="CE">
-                <input id="limparCientifico" class="botaoCientifico" type="button" value="C">
-                <input id="deletarCientifico" class="botaoCientifico" type="button" value="DEL">
-                <input id="calcularCientifico" class="botaoCientifico" type="button" value="=">
-                <input id="raizQuadrada" class="botaoCientifico" type="button" value="Raiz">
-                <input id="num7Cientifico" class="botaoCientifico" type="button" value="7">
-                <input id="num8Cientifico" class="botaoCientifico" type="button" value="8">
-                <input id="num9Cientifico" class="botaoCientifico" type="button" value="9">
-                <input id="dividirCientifico" class="botaoCientifico" type="button" value="/">
-                <input id="10ˣ" class="botaoCientifico" type="button" value="10ˣ">
-                <input id="num4Cientifico" class="botaoCientifico" type="button" value="4">
-                <input id="num5Cientifico" class="botaoCientifico" type="button" value="5">
-                <input id="num6Cientifico" class="botaoCientifico" type="button" value="6">
-                <input id="multiplicarCientifico" class="botaoCientifico" type="button" value="x">
-                <input id="xʸ" class="botaoCientifico" type="button" value="xʸ">
-                <input id="num1Cientifico" class="botaoCientifico" type="button" value="1">
-                <input id="num2Cientifico" class="botaoCientifico" type="button" value="2">
-                <input id="num3Cientifico" class="botaoCientifico" type="button" value="3">
-                <input id="subtrairCientifico" class="botaoCientifico" type="button" value="-">
-                <input id="x²" class="botaoCientifico" type="button" value="x²">
-                <input id="sinalCientifico" class="botaoCientifico" type="button" value="+/-">
-                <input id="num0Cientifico" class="botaoCientifico" type="button" value="0">
-                <input id="virgulaCientifico" class="botaoCientifico" type="button" value=",">
-                <input id="somarCientifico" class="botaoCientifico" type="button" value="+">
-                <input id="log" class="botaoCientifico" type="button" value="Log">
-                <input id="resto" class="botaoCientifico" type="button" value="Resto">
-                <input id="porcentagem" class="botaoCientifico" type="button" value="%">
             </div>
         </div>
 
@@ -268,7 +241,6 @@
 
     <script src="script.js"></script>
     <script src="calculadoras/calc_padrao.js"></script>
-    <script src="calculadoras/calc_cientifica.js"></script>
     <script src="conversores/conv_geral.js"></script>
 </body>
 

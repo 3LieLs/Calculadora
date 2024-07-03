@@ -28,18 +28,9 @@
     background: radial-gradient(circle, rgba(30,45,64,1) 27%, rgba(13,13,13,1) 100%);
 }
 
-#botoesCalculadoraCientifica{
-    visibility: hidden;
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    height: 60%;
-    background: radial-gradient(circle, rgba(30,45,64,1) 27%, rgba(13,13,13,1) 100%);
-}
-
 .botao {
     float: left;
-    width: 25%;
+    width: 20%;
     height: 20%;
     background: none;
     border: none;
