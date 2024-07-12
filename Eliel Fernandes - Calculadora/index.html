@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ElielFernandes">
+    <title>Calculadora</title>
+    <link rel="shortcut icon"
+        href="https://images.vexels.com/media/users/3/135553/isolated/preview/fe1680d9e81708fd79fc27b791401673-icone-de-calculadora-plana.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+    <main>
+        <header id="topo">
+            <img class="logo"
+                src="https://images.vexels.com/media/users/3/135553/isolated/preview/fe1680d9e81708fd79fc27b791401673-icone-de-calculadora-plana.png"
+                alt="">
+            <p><strong>Calculadora</strong></p>
+        </header>
+
+        <input id="botaoHistorico" type="button" value="H">
+        <div id="historico">
+            <input id="limparHistorico" type="button" value="Limpar">
+        </div>
+
+        <div id="tela">
+            <div id="calculoDisplay">
+                <p id="calculo"></p>
+            </div>
+
+            <div id="resultadoDisplay">
+                <p id="resultado"></p>
+            </div>
+        </div>
+
+        <form id="botoesCalculadoraPadrao" action="">
+            <input id="potencia" class="botao" type="button" value="xⁿ">
+            <input id="limparRegistro" class="botao" type="button" value="CE">
+            <input id="limpar" class="botao" type="button" value="C">
+            <input id="deletar" class="botao" type="button" value="DEL">
+            <input id="calcular" class="botao" type="button" value="=">
+            <input id="raizQualquer" class="botao" type="button" value="√">
+            <input id="num7" class="botao" type="button" value="7">
+            <input id="num8" class="botao" type="button" value="8">
+            <input id="num9" class="botao" type="button" value="9">
+            <input id="dividir" class="botao" type="button" value="÷">
+            <input id="raizQuadrada" class="botao" type="button" value="²√">
+            <input id="num4" class="botao" type="button" value="4">
+            <input id="num5" class="botao" type="button" value="5">
+            <input id="num6" class="botao" type="button" value="6">
+            <input id="multiplicar" class="botao" type="button" value="×">
+            <input id="resto" class="botao" type="button" value="%">
+            <input id="num1" class="botao" type="button" value="1">
+            <input id="num2" class="botao" type="button" value="2">
+            <input id="num3" class="botao" type="button" value="3">
+            <input id="subtrair" class="botao" type="button" value="−">
+            <input id="logaritimo" class="botao" type="button" value="log₂">
+            <input id="sinal" class="botao" type="button" value="+/-">
+            <input id="num0" class="botao" type="button" value="0">
+            <input id="virgula" class="botao" type="button" value=",">
+            <input id="somar" class="botao" type="button" value="+">
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="calc.js"></script>
+</body>
+
+</html>

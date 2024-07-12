@@ -1,0 +1,106 @@
+/*-BARRA DE ROLAR-*/
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 0px;
+}
+/*---------------*/
+
+:root{
+    --corFundo: linear-gradient(180deg, rgba(11, 20, 38, 1) 0%, rgba(13, 13, 13, 1) 25%)
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
+}
+
+body {
+    background-color: black;
+}
+
+main {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 25%;
+    height: 80%;
+    background: var(--corFundo);
+    border: solid 3px black;
+    border-radius: 15px;
+    box-shadow: 0px 20px 40px -30px white;
+}
+
+#topo {
+    width: 100%;
+    margin: 2% 0% 2% 0%;
+    padding: 0% 5% 0% 5%;
+}
+
+#topo>img {
+    width: 10%;
+}
+
+#topo>p {
+    display: inline;
+    font-size: 15pt;
+}
+
+#historico {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 0px;
+    padding: 10% 5% 5% 0%;
+    background-color: #0d131b;
+    border-radius: 15px;
+    z-index: 9999;
+    transition: 0.3s;
+    overflow: auto;
+}
+
+#historico>p {
+    clear: right;
+    float: right;
+}
+
+#historico>input {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    padding: 2%;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+}
+
+#historico>input:hover {
+    background-color: gray;
+}
+
+#botaoHistorico {
+    position: absolute;
+    right: 1%;
+    width: 7%;
+    height: 5%;
+    background-color: #090d13;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+#botaoHistorico:hover {
+    background-color: gray;
+}
