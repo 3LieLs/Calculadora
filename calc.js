@@ -95,17 +95,6 @@ num9.addEventListener('click', () => {
     resultado.innerHTML = `${numeros}`
 })
 
-var PI = document.querySelector('input#PI')
-PI.addEventListener('click', () => {
-    if (proximoCalculo == true) {
-        reset()
-    }
-    let pi = Math.PI
-    toString(pi)
-    numeros += pi
-    resultado.innerHTML = `${numeros}`
-})
-
 /*--OPERADORES----OPERADORES----OPERADORES----OPERADORES--*/
 var somar = document.querySelector('input#somar')
 somar.addEventListener('click', () => {
@@ -132,9 +121,9 @@ potencia.addEventListener('click', () => {
     operadorFunc('potencia', '^')
 })
 
-var raizQuadrada = document.querySelector('input#raizQuadrada')
-raizQuadrada.addEventListener('click', () => {
-    operadorFunc('raizQuadrada', '²√')
+var raizQualquer = document.querySelector('input#raizQualquer')
+raizQualquer.addEventListener('click', () => {
+    operadorFunc('raizQualquer', '√')
 })
 
 var resto = document.querySelector('input#resto')
@@ -142,9 +131,22 @@ resto.addEventListener('click', () => {
     operadorFunc('resto', '%')
 })
 
+var raizQuadrada = document.querySelector('input#raizQuadrada')
+raizQuadrada.addEventListener('click', () => {
+    if (numeros != '') {
+        calculo.insertAdjacentHTML('beforeend', `²√${numeros} = `)
+        numeros **= (1 / 2)
+        resultado.innerHTML = `${numeros}`
+    }
+})
+
 var logaritimo = document.querySelector('input#logaritimo')
 logaritimo.addEventListener('click', () => {
-    operadorFunc('logaritimo', '%')
+    if (numeros != '') {
+        calculo.insertAdjacentHTML('beforeend', `Log₂(${numeros}) = `)
+        numeros = Math.log2(numeros)
+        resultado.innerHTML = `${numeros}`
+    }
 })
 
 function operadorFunc(ope1, ope2) {
@@ -218,6 +220,7 @@ var limpar = document.querySelector('input#limpar')
 limpar.addEventListener('click', () => {
     reset()
 })
+
 function reset() {
     numeros = ''
     resultado.innerText = `${numeros}`
@@ -267,16 +270,12 @@ calcular.addEventListener('click', () => {
             resultadoTotal **= parseFloat(numerosTotal[x])
         }
 
-        if (operadoresTotal[x - 1] == "raizQuadrada") {
-            resultadoTotal = Math.sqrt(parseFloat(numerosTotal[x]))
+        if (operadoresTotal[x - 1] == "raizQualquer") {
+            resultadoTotal **= (1 / parseFloat(numerosTotal[x]))
         }
 
         if (operadoresTotal[x - 1] == "resto") {
             resultadoTotal %= parseFloat(numerosTotal[x])
-        }
-
-        if (operadoresTotal[x - 1] == "logaritimo") {
-            resultadoTotal = Math.log(parseFloat(numerosTotal[x]))
         }
 
         iNum++
@@ -322,11 +321,11 @@ calcular.addEventListener('click', () => {
         }
     }
 
-    if (operadoresTotal[numerosTotal.length - 1] == "raizQuadrada") {
+    if (operadoresTotal[numerosTotal.length - 1] == "raizQualquer") {
         if (numeros == '') {
             numeros = ''
         } else {
-            resultadoTotal = Math.sqrt(parseFloat(numeros))
+            resultadoTotal **= (1 / parseFloat(numeros))
         }
     }
 
@@ -338,21 +337,19 @@ calcular.addEventListener('click', () => {
         }
     }
 
-    if (operadoresTotal[numerosTotal.length - 1] == "logaritimo") {
-        if (numeros == '') {
-            numeros = ''
-        } else {
-            resultadoTotal = Math.log(parseFloat(numeros)) 
-        }
+    calculo.insertAdjacentHTML('beforeend', ` ${numeros} = `)
+    if (isNaN(resultadoTotal) == true || isFinite(resultadoTotal) == false) {
+        resultado.innerHTML = `Error!`
+    } else {
+        resultado.innerHTML = `${resultadoTotal}`
     }
 
-    calculo.insertAdjacentHTML('beforeend', ` ${numeros} = `)
-    resultado.innerHTML = `${resultadoTotal}`
-
+    /*Adicionar ao histórico*/
     add = document.createElement("p");
-    add.innerHTML = `${calculo.innerHTML} ${resultadoTotal}`;
+    add.innerHTML = `${calculo.innerHTML} ${resultado.innerHTML}`;
     historico.appendChild(add);
     hist++
+
     proximoCalculo = true
 })
 /*--------------------------------------------------------------------------------------------------------*/
